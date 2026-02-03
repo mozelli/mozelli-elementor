@@ -94,12 +94,6 @@ const gapScale = [
   { label: "8", value: "8" },
 ];
 
-const buildOptions = (prefix: string) =>
-  spacingScale.map((space) => ({
-    label: space.label,
-    value: `${prefix}-${space.value}`,
-  }));
-
 const buildGapOptions = () =>
   gapScale.map((g) => ({
     label: g.label,
