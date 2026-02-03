@@ -6,8 +6,7 @@ import { useEditorStore } from "@/app/editor/store/useEditorStore";
 import { ElementRenderer } from "@/app/editor/rendreres/elementRenderer";
 
 const Display = () => {
-  const { elements, addElement, selectElement, selectedElementId } =
-    useEditorStore();
+  const { elements, addElement } = useEditorStore();
 
   return (
     <div className="flex flex-col w-[85%]">
