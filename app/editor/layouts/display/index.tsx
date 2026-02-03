@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useEditorStore } from "../store/useEditorStore";
+import { useEditorStore } from "@/app/editor/store/useEditorStore";
 
-import { ElementRenderer } from "../elementRenderer";
+import { ElementRenderer } from "@/app/editor/rendreres/elementRenderer";
 
 const Display = () => {
   const { elements, addElement, selectElement, selectedElementId } =

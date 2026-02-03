@@ -1,10 +1,10 @@
 "use client";
 
-import { useEditorStore } from "../store/useEditorStore";
+import { useEditorStore } from "@/app/editor/store/useEditorStore";
 import { FieldGroup, FieldLabel, FieldSet, Field } from "@/components/ui/field";
 
-import { elementSchemas } from "../elementSchemas";
-import { PropertySchema } from "../types";
+import { ElementSchemas } from "@/app/editor/schemas/elementSchemas";
+import { PropertySchema } from "@/app/editor/types/types";
 import {
   Accordion,
   AccordionContent,
@@ -25,7 +25,7 @@ const SideBar = () => {
     );
   }
 
-  const schema = elementSchemas[element.type];
+  const schema = ElementSchemas[element.type];
   const grouped = schema.properties.reduce(
     (acc, props) => {
       const category = props.category ?? "General";
@@ -80,13 +80,14 @@ const SideBar = () => {
                           <select
                             id={prop.key}
                             value={element.props[prop.key]}
-                            onChange={(e) =>
+                            onChange={(e) => {
                               updateElementProp(
                                 element.id,
                                 prop.key,
                                 e.target.value,
-                              )
-                            }
+                              );
+                              console.log(elements);
+                            }}
                             className="border rounded-sm mb-5"
                           >
                             {prop.options?.map((option) => (

@@ -1,5 +1,5 @@
-import { EditorElement } from "../types";
-import { useEditorStore } from "../store/useEditorStore";
+import { EditorElement } from "@/app/editor/types/types";
+import { useEditorStore } from "@/app/editor/store/useEditorStore";
 import { cn } from "@/lib/utils";
 
 interface Props {

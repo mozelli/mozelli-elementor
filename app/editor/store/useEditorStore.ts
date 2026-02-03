@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
-import { ElementType, EditorElement } from "@/app/editor/types";
-import { elementSchemas } from "@/app/editor/elementSchemas";
+import { ElementType, EditorElement } from "@/app/editor/types/types";
+import { ElementSchemas } from "@/app/editor/schemas/elementSchemas";
 
 interface EditorState {
   elements: EditorElement[];
@@ -18,7 +18,7 @@ export const useEditorStore = create<EditorState>((set) => ({
 
   addElement: (type) =>
     set((state) => {
-      const schema = elementSchemas[type];
+      const schema = ElementSchemas[type];
 
       const newElement: EditorElement = {
         id: crypto.randomUUID(),

@@ -1,4 +1,4 @@
-import { EditorElement } from "@/app/editor/types";
+import { EditorElement } from "@/app/editor/types/types";
 
 export function composeContainerClasses(element: EditorElement) {
   const {

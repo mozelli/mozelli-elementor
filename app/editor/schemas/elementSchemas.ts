@@ -1,4 +1,4 @@
-import { ElementSchema } from "./types";
+import { ElementSchema } from "@/app/editor/types/types";
 
 /* Shared spacing scale */
 const spacingScale = [
@@ -11,12 +11,46 @@ const spacingScale = [
   { value: "6", label: "24" },
 ];
 
-/* Margin options */
-/*const marginTopOptions = buildOptions("mt");
-const marginBottomOptions = buildOptions("mb");
-const marginLeftOptions = buildOptions("ml");
-const marginRightOptions = buildOptions("mr");
-*/
+/* Padding options */
+const paddingTopOptions = [
+  { label: "0", value: "pt-0" },
+  { label: "4", value: "pt-1" },
+  { label: "8", value: "pt-2" },
+  { label: "12", value: "pt-3" },
+  { label: "16", value: "pt-4" },
+  { label: "20", value: "pt-5" },
+  { label: "24", value: "pt-6" },
+];
+
+const paddingRightOptions = [
+  { label: "0", value: "pr-0" },
+  { label: "4", value: "pr-1" },
+  { label: "8", value: "pr-2" },
+  { label: "12", value: "pr-3" },
+  { label: "16", value: "pr-4" },
+  { label: "20", value: "pr-5" },
+  { label: "24", value: "pr-6" },
+];
+
+const paddingBottomOptions = [
+  { label: "0", value: "pb-0" },
+  { label: "4", value: "pb-1" },
+  { label: "8", value: "pb-2" },
+  { label: "12", value: "pb-3" },
+  { label: "16", value: "pb-4" },
+  { label: "20", value: "pb-5" },
+  { label: "24", value: "pb-6" },
+];
+
+const paddingLeftOptions = [
+  { label: "0", value: "pl-0" },
+  { label: "4", value: "pl-1" },
+  { label: "8", value: "pl-2" },
+  { label: "12", value: "pl-3" },
+  { label: "16", value: "pl-4" },
+  { label: "20", value: "pl-5" },
+  { label: "24", value: "pl-6" },
+];
 
 /* Width options */
 const widthOptions = [
@@ -72,12 +106,6 @@ const buildGapOptions = () =>
     value: `gap-${g.value}`,
   }));
 
-/* Padding options */
-const paddingTopOptions = buildOptions("pt");
-const paddingBottomOptions = buildOptions("pb");
-const paddingLeftOptions = buildOptions("pl");
-const paddingRightOptions = buildOptions("pr");
-
 const displayOptions = [
   { label: "Block", value: "block" },
   { label: "Flex", value: "flex" },
@@ -123,7 +151,7 @@ const gridRowsOptions = [
   { label: "4", value: "grid-rows-4" },
 ];
 
-export const elementSchemas: Record<string, ElementSchema> = {
+export const ElementSchemas: Record<string, ElementSchema> = {
   container: {
     type: "container",
     label: "Container",
@@ -186,7 +214,7 @@ export const elementSchemas: Record<string, ElementSchema> = {
       },
       {
         category: "Size",
-        key: "centered",
+        key: "center",
         order: 3,
         label: "Center Horizontally",
         type: "select",

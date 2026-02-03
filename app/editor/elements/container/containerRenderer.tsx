@@ -1,13 +1,13 @@
-import { EditorElement } from "./types";
+import { EditorElement } from "@/app/editor/types/types";
 import { cn } from "@/lib/utils";
-import { useEditorStore } from "./store/useEditorStore";
-import { composeContainerClasses } from "./composeContainerClasses";
+import { useEditorStore } from "@/app/editor/store/useEditorStore";
+import { composeContainerClasses } from "@/app/editor/elements/container/composeContainerClasses";
 
 interface Props {
   element: EditorElement;
 }
 
-export function ContainerRenderer({ element }: Props) {
+export const ContainerRenderer = ({ element }: Props) => {
   const selectElement = useEditorStore((state) => state.selectElement);
   const selecElementId = useEditorStore((state) => state.selectedElementId);
 
@@ -21,9 +21,11 @@ export function ContainerRenderer({ element }: Props) {
       }}
       className={cn(
         "min-h-20 border rounded-md transition hover:ring-2 ring-red-200",
-        composeContainerClasses,
+        composeContainerClasses(element),
         isSelected && "ring-2 ring-red-200",
       )}
-    ></div>
+    >
+      container
+    </div>
   );
-}
+};

@@ -1,5 +1,5 @@
-import Display from "./display";
-import SideBar from "./sidebar";
+import Display from "./layouts/display";
+import SideBar from "@/app/editor/layouts/sidebar";
 
 const Editor = () => {
   return (
