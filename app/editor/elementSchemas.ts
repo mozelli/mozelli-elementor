@@ -299,35 +299,3 @@ export const elementSchemas: Record<string, ElementSchema> = {
     ],
   },
 };
-
-/* Margin */
-/*
-{
-        key: "marginTop",
-        label: "Margin Top",
-        type: "select",
-        defaultValue: "mt-0",
-        options: marginTopOptions,
-      },
-      {
-        key: "marginBottom",
-        label: "Margin Bop",
-        type: "select",
-        defaultValue: "mb-0",
-        options: marginBottomOptions,
-      },
-      {
-        key: "marginLeft",
-        label: "Margin Left",
-        type: "select",
-        defaultValue: "ml-0",
-        options: marginLeftOptions,
-      },
-      {
-        key: "marginRight",
-        label: "Margin Right",
-        type: "select",
-        defaultValue: "mr-0",
-        options: marginRightOptions,
-      },
-*/
